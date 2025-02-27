@@ -24,10 +24,9 @@ namespace Tusk3_11
             int minab = Math.Min(a,b);
             int maxpq = Math.Max(p,q);
             int minpq = Math.Min(p,q);
-            int minpq = Math.Min(p,q);
             int maxrs = Math.Max(r, s);
             int minrs = Math.Min(r, s);
-            string posibility;
+            string posibility = "";
             //Проверяем, можно ли вообще воткнуть дома на тот участок. Сравниваем самую большую сторону дома
             //с самой длинной стороной участка и самую короткую сторону дома с самой короткой стороной участка
             if (maxab < Math.Max(maxrs, maxpq) || minab < Math.Min(minrs, minpq))
@@ -39,7 +38,7 @@ namespace Tusk3_11
                 //Пока что фиг знает, не идет ничего в голову
             
             }
-
+            Console.WriteLine(posibility);
         }
 
     }

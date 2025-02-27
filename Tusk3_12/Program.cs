@@ -111,6 +111,9 @@ namespace Tusk3_12
                     case 9:
                         dig2 = " девяносто";
                         break;
+                    case 0:
+                        dig2 = "";
+                        break;
                 }
 
                 switch (_dig3)
@@ -146,7 +149,7 @@ namespace Tusk3_12
                         dig3 = " девять";
                         break;
                 }
-                Console.Write(dig1 + dig2 + dig3);
+                Console.Write(num > 999 || num < 100 ? "Ошибка" : dig1 + dig2 + dig3);
             }
             
         }
