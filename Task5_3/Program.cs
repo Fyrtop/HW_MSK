@@ -24,40 +24,28 @@ namespace Task5_3
                 Console.Write($"{arr[i]} ");
             }
             Console.WriteLine();
-            int[] arrTmp = arr;
+            int max = arr[0];
+            int min = arr[0];
+            
             for (int i = 0; i < n; i++)
             {
-                for (int j = i + 1; j < n; j++)
+                if (max < arr[i])
                 {
-                    if (arrTmp[i] < arrTmp[j])
-                    {
-                        indMin = j;
-                        int tmp = arrTmp[i];
-                        arrTmp[i] = arrTmp[j];
-                        arrTmp[j] = tmp;
+                    max = arr[i];
+                    indMax = i;
+                }
 
-                    }
+                if (min > arr[i])
+                {
+                    min = arr[i];
+                    indMin = i;
                 }
             }
-            for (int i = 0; i > n; i++)
-            {
 
-                for (int j = i + 1; j < n; j++)
-                {
-                    if (arr[i] < arr[j])
-                    {
-                        indMax = j;
-                        int tmp = arrTmp[i];
-                        arrTmp[i] = arrTmp[j];
-                        arrTmp[j] = tmp;
 
-                    }
-                }
-            }
-            //Чот фиг знает, как тут индексы получить. С максимальным и минимальным все просто, все через сортировку, а индексы быз специальных средств получить как не понимаю
             Console.WriteLine();
-            //Console.Write($"Мах: {arrTmp[n-1]}, Индекс: {indMax}, Min: {arr[0]}, Индекс: {indMin}");
-            //Console.Write($"Мах: {arr[n-1]}, Индекс: {indMax}, Min: {arr[0]}, Индекс: {indMin}");
+            Console.Write($"Max: {max}, Индекс: {indMax}, Min: {min}, Индекс: {indMin}");
+
 
 
         }
