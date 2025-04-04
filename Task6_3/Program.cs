@@ -12,7 +12,10 @@ namespace Task6_3
         {
             string mon = Console.ReadLine();
             string year = Console.ReadLine();
-           double mount = double.Parse(Console.ReadLine());
+            double mount = double.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine()); 
+
+            Console.WriteLine(
 
 
         }
